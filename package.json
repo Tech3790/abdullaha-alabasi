@@ -1,0 +1,53 @@
+{
+  "name": "boilerplate-client",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-helmet": "^5.2.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.6",
+    "@types/react": "^16.8.0",
+    "@types/react-dom": "^16.8.0",
+    "@types/react-helmet": "^5.0.7",
+    "@types/react-router": "^4.0.31",
+    "@types/react-router-dom": "^4.3.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "js-yaml": "^3.12.2",
+    "node-sass": "^4.9.3",
+    "react-snap": "^1.20.0",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.0",
+    "typescript": "^3.0.3",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "webapp-webpack-plugin": "^2.6.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "scripts": {
+    "build:dev": "NODE_ENV=development webpack --mode development",
+    "build:prod": "NODE_ENV=production webpack --mode production && react-snap",
+    "start:dev": "NODE_ENV=development webpack-dev-server --open",
+    "start:prod": "NODE_ENV=production webpack-dev-server --open",
+    "watch:dev": "NODE_ENV=development webpack --mode development --watch",
+    "watch:prod": "NODE_ENV=production webpack --mode production --watch"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "include": [
+      "/"
+    ],
+    "waitFor": 1000
+  }
+}
