@@ -21,7 +21,7 @@ import './App.sass';
 
 const history = createBrowserHistory();
 
-export const App: React.SFC = () => (
+export const App: React.FC = () => (
   <Router history={history}>
     <ScrollToTop>
       <MainTemplate>
@@ -36,8 +36,4 @@ export const App: React.SFC = () => (
   </Router>
 );
 
-export const AppProviders: React.SFC = ({ children }) => (
-  <>
-    {children}
-  </>
-);
+export const AppProviders: React.FC = ({ children }) => <>{children}</>;
